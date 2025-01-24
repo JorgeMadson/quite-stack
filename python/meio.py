@@ -1,5 +1,5 @@
-# aqui estou vendo como funcionam os módulos
-
+# aqui estou vendo como funcionam os módulos e importações
+# operações assíncronas e talvez orientação a objetos
 
 from inicio import funcao
 # então quando importa o código de inicio é executado :O
