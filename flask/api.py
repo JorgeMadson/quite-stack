@@ -1,6 +1,5 @@
 # hora de aprender Flask
 from flask import Flask, render_template
-from pages import home_view
 #Criando uma instancia de flask
 app = Flask(__name__)
 

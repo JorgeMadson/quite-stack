@@ -1,0 +1,36 @@
+POST http://localhost:5000/email HTTP/1.1
+content-type: application/json
+
+{
+    "results": [
+        {
+            "bulkId": "7dy3rajfsn3en76hsztl",
+            "price": {
+                "pricePerMessage": 0.001,
+                "currency": "BRL"
+            },
+            "status": {
+                "id": 5,
+                "groupId": 3,
+                "groupName": "DELIVERED",
+                "name": "DELIVERED_TO_HANDSET",
+                "description": "Message delivered to handset"
+            },
+            "error": {
+                "id": 0,
+                "name": "NO_ERROR",
+                "description": "No Error",
+                "groupId": 0,
+                "groupName": "OK",
+                "permanent": false
+            },
+            "messageId": "yfkgy9xol5kpl33u384n",
+            "doneAt": "2024-07-16T17:26:54.966-0300",
+            "smsCount": 1,
+            "sentAt": "2024-07-16T17:26:52.880-0300",
+            "browserLink": "",
+            "callbackData": "{'qj_contact_id': 3}",
+            "to": "joao.madero@quite.com.br"
+        }
+    ]
+}

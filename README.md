@@ -23,7 +23,7 @@ Este projeto consiste em desenvolver uma API utilizando Flask, SQLAlchemy e Cele
 
 | Campo            | Tipo        | Descrição                                         |
 |------------------|-------------|---------------------------------------------------|
-| status           | String      | Status do email (ex.: DELIVERED, UNDELIVERABLE) |
+| status           | String      | Status do email (ex.: DELIVERED, UNDELIVERABLE)   |
 | email            | String      | Endereço de email                                 |
 | data_recebimento | DateTime    | Data do recebimento da resposta                   |
 | id_externo       | String      | ID externo para identificar cada retorno          |
