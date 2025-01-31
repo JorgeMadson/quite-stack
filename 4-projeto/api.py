@@ -1,8 +1,10 @@
 from flask import Flask, request
 from celery import Celery
 
-app_celery = Celery('tasks', broker='amqp://guest@localhost//')
+app_celery = Celery('tasks', broker='amqp://guest@localhost//', backend='rpc://')
 
+
+#pra rodar tem que mandar o celery -A api worker -l INFO
 @app_celery.task
 def envio_pra_fila(data):
     print('opa entrou no celery')
