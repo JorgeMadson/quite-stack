@@ -14,4 +14,4 @@ def soma(x, y):
     return x + y
 
 # Esse arquivo tem é a definição da task/tarefa é necessário ligar o worker pra deixar ela disponível
-# celery -A tarefas worker -l INFO0
+# celery -A tarefas worker -l INFO
