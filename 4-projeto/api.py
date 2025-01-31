@@ -1,25 +1,18 @@
 from flask import Flask, request
-from celery import Celery
 
-app_celery = Celery('tasks', broker='amqp://guest@localhost//', backend='rpc://')
-
-
-#pra rodar tem que mandar o celery -A api worker -l INFO
-@app_celery.task
-def envio_pra_fila(data):
-    print('opa entrou no celery')
-    return str(data)
+from tasks import envio_pra_fila
 
 print('Iniciando o servidor')
 app = Flask(__name__)
 
-
+#Flask
 #aqui vou fazer o projeto com tudo funcionando
 @app.route("/email", methods=['POST'])
 def receber_requisicao():
     json_do_post = request.get_json()
-    envio_pra_fila.delay(json_do_post)
-    return json_do_post
+    while range(0, 1_000_000):
+        resposta = envio_pra_fila.delay(json_do_post)
+    return resposta.id
 
 if __name__ == '__main__':
     app.run(debug=True)
